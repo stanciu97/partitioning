@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E12E04D0-C11C-36C0-950E-A203DCBFB37C}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.30323.82</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\</OutDir>
+    <IntDir>Release\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\Qt\4.7.4\include\QtCore;c:\Qt\4.7.4\include\QtGui;c:\Qt\4.7.4\include\QtTest;c:\Qt\4.7.4\include;..\..\src;..\..\src;c:\Qt\4.7.4\include\ActiveQt;moc;..\..\src\qhulltest;.;c:\Qt\4.7.4\mkspecs\win32-msvc2005;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>Debug\</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForcedIncludeFiles>..\..\src\qhulltest\RoadTest.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <ObjectFileName>Debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeaderOutputFile>$(IntDir)qhulltest.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>..\..\src\qhulltest\RoadTest.h</PrecompiledHeaderFile>
+      <PreprocessorDefinitions>UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QT_DLL;QT_TESTLIB_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;QT_NO_DYNAMIC_CAST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ProgramDataBaseFileName>.\</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>../../lib\qhullcpp_d.lib;../../lib\qhullstatic_rd.lib;c:\Qt\4.7.4\lib\QtTestd4.lib;c:\Qt\4.7.4\lib\QtGuid4.lib;c:\Qt\4.7.4\lib\QtCored4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>c:\Qt\4.7.4\lib;../../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration />
+      <OutputFile>..\..\bin\qhulltest.exe</OutputFile>
+      <ProgramDatabaseFile />
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QT_DLL;QT_TESTLIB_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;QT_NO_DYNAMIC_CAST;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\Qt\4.7.4\include\QtCore;c:\Qt\4.7.4\include\QtGui;c:\Qt\4.7.4\include\QtTest;c:\Qt\4.7.4\include;..\..\src;..\..\src;c:\Qt\4.7.4\include\ActiveQt;moc;..\..\src\qhulltest;.;c:\Qt\4.7.4\mkspecs\win32-msvc2005;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>Release\</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DebugInformationFormat />
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForcedIncludeFiles>..\..\src\qhulltest\RoadTest.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <ObjectFileName>Release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeaderOutputFile>$(IntDir)qhulltest.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>..\..\src\qhulltest\RoadTest.h</PrecompiledHeaderFile>
+      <PreprocessorDefinitions>QT_NO_DEBUG;NDEBUG;UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QT_DLL;QT_NO_DEBUG;QT_TESTLIB_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;QT_NO_DYNAMIC_CAST;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ProgramDataBaseFileName>.\</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>../../lib\qhullcpp.lib;../../lib\qhullstatic_r.lib;c:\Qt\4.7.4\lib\QtTest4.lib;c:\Qt\4.7.4\lib\QtGui4.lib;c:\Qt\4.7.4\lib\QtCore4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>c:\Qt\4.7.4\lib;../../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <LinkTimeCodeGeneration />
+      <OutputFile>..\..\bin\qhulltest.exe</OutputFile>
+      <ProgramDatabaseFile />
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>QT_NO_DEBUG;NDEBUG;UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QT_DLL;QT_NO_DEBUG;QT_TESTLIB_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;QT_NO_DYNAMIC_CAST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\libqhullcpp\qt-qhull.cpp" />
+    <ClCompile Include="..\..\src\qhulltest\Coordinates_test.cpp" />
+    <ClCompile Include="..\..\src\qhulltest\PointCoordinates_test.cpp" />
+    <ClCompile Include="..\..\src\qhulltest\QhullFacetList_test.cpp" />
+    <ClCompile Include="..\..\src\qhulltest\QhullFacetSet_test.cpp" />
+    <ClCompile Include="..\..\src\qhulltest\QhullFacet_test.cpp" />
+    <ClCompile Include="..\..\src\qhulltest\QhullHyperplane_test.cpp" />
+    <ClCompile Include="..\..\src\qhulltest\QhullLinkedList_test.cpp" />
+    <ClCompile Include="..\..\src\qhulltest\QhullPointSet_test.cpp" />
+    <ClCompile Include="..\..\src\qhulltest\QhullPoints_test.cpp" />
+    <ClCompile Include="..\..\src\qhulltest\QhullPoint_test.cpp" />
+    <ClCompile Include="..\..\src\qhulltest\QhullRidge_test.cpp" />
+    <ClCompile Include="..\..\src\qhulltest\QhullSet_test.cpp" />
+    <ClCompile Include="..\..\src\qhulltest\qhulltest.cpp" />
+    <ClCompile Include="..\..\src\qhulltest\QhullVertexSet_test.cpp" />
+    <ClCompile Include="..\..\src\qhulltest\QhullVertex_test.cpp" />
+    <ClCompile Include="..\..\src\qhulltest\Qhull_test.cpp" />
+    <ClCompile Include="..\..\src\qhulltest\RboxPoints_test.cpp" />
+    <ClCompile Include="..\..\src\qhulltest\RoadTest.cpp" />
+    <ClCompile Include="..\..\src\qhulltest\RoadTest.h.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(INHERIT)</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(INHERIT)</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\src\qhulltest\RoadTest.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\qhulltest\RoadTest.h;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\RoadTest.h -o moc\moc_RoadTest.cpp
+if errorlevel 1 goto VCReportError
+echo /*-------------------------------------------------------------------- &gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * Precompiled header source file used by Visual Studio.NET to generate&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * the .pch file.&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo *&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * Due to issues with the dependencies checker within the IDE, it&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * sometimes fails to recompile the PCH file, if we force the IDE to&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * create the PCH file directly from the header file.&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo *&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * This file is auto-generated by qmake since no PRECOMPILED_SOURCE was&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * specified, and is used as the common stdafx.cpp. The file is only&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * generated when creating .vcproj project files, and is not used for&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * command line compilations by nmake.&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo *&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * WARNING: All changes made in this file will be lost.&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo --------------------------------------------------------------------*/&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo #include "RoadTest.h"&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating precompiled header source file %27..\..\src\qhulltest\RoadTest.h.cpp%27 ...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc\moc_RoadTest.cpp;..\..\src\qhulltest\RoadTest.h.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\qhulltest\RoadTest.h;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\RoadTest.h -o moc\moc_RoadTest.cpp
+if errorlevel 1 goto VCReportError
+echo /*-------------------------------------------------------------------- &gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * Precompiled header source file used by Visual Studio.NET to generate&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * the .pch file.&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo *&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * Due to issues with the dependencies checker within the IDE, it&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * sometimes fails to recompile the PCH file, if we force the IDE to&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * create the PCH file directly from the header file.&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo *&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * This file is auto-generated by qmake since no PRECOMPILED_SOURCE was&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * specified, and is used as the common stdafx.cpp. The file is only&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * generated when creating .vcproj project files, and is not used for&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * command line compilations by nmake.&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo *&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo * WARNING: All changes made in this file will be lost.&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo --------------------------------------------------------------------*/&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp
+if errorlevel 1 goto VCReportError
+echo #include "RoadTest.h"&gt;&gt;..\..\src\qhulltest\RoadTest.h.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating precompiled header source file %27..\..\src\qhulltest\RoadTest.h.cpp%27 ...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc\moc_RoadTest.cpp;..\..\src\qhulltest\RoadTest.h.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="moc\Coordinates_test.moc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\qhulltest\Coordinates_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\Coordinates_test.cpp -o moc\Coordinates_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC ..\..\src\qhulltest\Coordinates_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc\Coordinates_test.moc;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\qhulltest\Coordinates_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\Coordinates_test.cpp -o moc\Coordinates_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC ..\..\src\qhulltest\Coordinates_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc\Coordinates_test.moc;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="moc\PointCoordinates_test.moc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\qhulltest\PointCoordinates_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\PointCoordinates_test.cpp -o moc\PointCoordinates_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC ..\..\src\qhulltest\PointCoordinates_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc\PointCoordinates_test.moc;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\qhulltest\PointCoordinates_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\PointCoordinates_test.cpp -o moc\PointCoordinates_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC ..\..\src\qhulltest\PointCoordinates_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc\PointCoordinates_test.moc;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="moc\QhullFacetList_test.moc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\qhulltest\QhullFacetList_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullFacetList_test.cpp -o moc\QhullFacetList_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC ..\..\src\qhulltest\QhullFacetList_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc\QhullFacetList_test.moc;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\qhulltest\QhullFacetList_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullFacetList_test.cpp -o moc\QhullFacetList_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC ..\..\src\qhulltest\QhullFacetList_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc\QhullFacetList_test.moc;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="moc\QhullFacetSet_test.moc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\qhulltest\QhullFacetSet_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullFacetSet_test.cpp -o moc\QhullFacetSet_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC ..\..\src\qhulltest\QhullFacetSet_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc\QhullFacetSet_test.moc;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\qhulltest\QhullFacetSet_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullFacetSet_test.cpp -o moc\QhullFacetSet_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC ..\..\src\qhulltest\QhullFacetSet_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc\QhullFacetSet_test.moc;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="moc\QhullFacet_test.moc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\qhulltest\QhullFacet_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullFacet_test.cpp -o moc\QhullFacet_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC ..\..\src\qhulltest\QhullFacet_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc\QhullFacet_test.moc;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\qhulltest\QhullFacet_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullFacet_test.cpp -o moc\QhullFacet_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC ..\..\src\qhulltest\QhullFacet_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc\QhullFacet_test.moc;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="moc\QhullHyperplane_test.moc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\qhulltest\QhullHyperplane_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullHyperplane_test.cpp -o moc\QhullHyperplane_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC ..\..\src\qhulltest\QhullHyperplane_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc\QhullHyperplane_test.moc;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\qhulltest\QhullHyperplane_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullHyperplane_test.cpp -o moc\QhullHyperplane_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC ..\..\src\qhulltest\QhullHyperplane_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc\QhullHyperplane_test.moc;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="moc\QhullLinkedList_test.moc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\qhulltest\QhullLinkedList_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullLinkedList_test.cpp -o moc\QhullLinkedList_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC ..\..\src\qhulltest\QhullLinkedList_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc\QhullLinkedList_test.moc;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\qhulltest\QhullLinkedList_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullLinkedList_test.cpp -o moc\QhullLinkedList_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC ..\..\src\qhulltest\QhullLinkedList_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc\QhullLinkedList_test.moc;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="moc\QhullPointSet_test.moc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\qhulltest\QhullPointSet_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullPointSet_test.cpp -o moc\QhullPointSet_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC ..\..\src\qhulltest\QhullPointSet_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc\QhullPointSet_test.moc;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\qhulltest\QhullPointSet_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullPointSet_test.cpp -o moc\QhullPointSet_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC ..\..\src\qhulltest\QhullPointSet_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc\QhullPointSet_test.moc;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="moc\QhullPoints_test.moc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\qhulltest\QhullPoints_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullPoints_test.cpp -o moc\QhullPoints_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC ..\..\src\qhulltest\QhullPoints_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc\QhullPoints_test.moc;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\qhulltest\QhullPoints_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullPoints_test.cpp -o moc\QhullPoints_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC ..\..\src\qhulltest\QhullPoints_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc\QhullPoints_test.moc;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="moc\QhullPoint_test.moc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\qhulltest\QhullPoint_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullPoint_test.cpp -o moc\QhullPoint_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC ..\..\src\qhulltest\QhullPoint_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc\QhullPoint_test.moc;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\qhulltest\QhullPoint_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullPoint_test.cpp -o moc\QhullPoint_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC ..\..\src\qhulltest\QhullPoint_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc\QhullPoint_test.moc;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="moc\QhullRidge_test.moc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\qhulltest\QhullRidge_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullRidge_test.cpp -o moc\QhullRidge_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC ..\..\src\qhulltest\QhullRidge_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc\QhullRidge_test.moc;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\qhulltest\QhullRidge_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullRidge_test.cpp -o moc\QhullRidge_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC ..\..\src\qhulltest\QhullRidge_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc\QhullRidge_test.moc;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="moc\QhullSet_test.moc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\qhulltest\QhullSet_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullSet_test.cpp -o moc\QhullSet_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC ..\..\src\qhulltest\QhullSet_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc\QhullSet_test.moc;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\qhulltest\QhullSet_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullSet_test.cpp -o moc\QhullSet_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC ..\..\src\qhulltest\QhullSet_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc\QhullSet_test.moc;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="moc\QhullVertexSet_test.moc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\qhulltest\QhullVertexSet_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullVertexSet_test.cpp -o moc\QhullVertexSet_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC ..\..\src\qhulltest\QhullVertexSet_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc\QhullVertexSet_test.moc;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\qhulltest\QhullVertexSet_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullVertexSet_test.cpp -o moc\QhullVertexSet_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC ..\..\src\qhulltest\QhullVertexSet_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc\QhullVertexSet_test.moc;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="moc\QhullVertex_test.moc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\qhulltest\QhullVertex_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullVertex_test.cpp -o moc\QhullVertex_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC ..\..\src\qhulltest\QhullVertex_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc\QhullVertex_test.moc;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\qhulltest\QhullVertex_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\QhullVertex_test.cpp -o moc\QhullVertex_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC ..\..\src\qhulltest\QhullVertex_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc\QhullVertex_test.moc;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="moc\Qhull_test.moc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\qhulltest\Qhull_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\Qhull_test.cpp -o moc\Qhull_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC ..\..\src\qhulltest\Qhull_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc\Qhull_test.moc;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\qhulltest\Qhull_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\Qhull_test.cpp -o moc\Qhull_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC ..\..\src\qhulltest\Qhull_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc\Qhull_test.moc;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="moc\RboxPoints_test.moc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\src\qhulltest\RboxPoints_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\RboxPoints_test.cpp -o moc\RboxPoints_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC ..\..\src\qhulltest\RboxPoints_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc\RboxPoints_test.moc;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\qhulltest\RboxPoints_test.cpp;C:\Qt\4.7.4\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\4.7.4\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DQT_TESTLIB_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -DQT_NO_DYNAMIC_CAST -I"c:\Qt\4.7.4\include\QtCore" -I"c:\Qt\4.7.4\include\QtGui" -I"c:\Qt\4.7.4\include\QtTest" -I"c:\Qt\4.7.4\include" -I"..\..\src" -I"..\..\src" -I"c:\Qt\4.7.4\include\ActiveQt" -I"moc" -I"..\..\src\qhulltest" -I"." -Ic:\Qt\4.7.4\mkspecs\win32-msvc2005 -D_MSC_VER=1400 -DWIN32 ..\..\src\qhulltest\RboxPoints_test.cpp -o moc\RboxPoints_test.moc</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC ..\..\src\qhulltest\RboxPoints_test.cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc\RboxPoints_test.moc;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\qhullcpp.vcxproj">
+      <Project>{7326816b-c401-4aca-8027-03ba7a98c16b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\qhullstatic_r.vcxproj">
+      <Project>{635ec42d-5c25-4d20-b5c2-d0a0034eb9b8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\Spatial.cpp" />
+    <ClCompile Include="src\SpatioTemporal.cpp" />
+    <ClCompile Include="src\GeneticEvolution.cpp" />
+    <ClCompile Include="src\Voronoi.cpp" />
+    <ClCompile Include="src\OrTools.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\NodesDistance.cpp" />
+    <ClCompile Include="src\KMedoid.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ConsecutiveRandoms.h" />
+    <ClInclude Include="src\NodesDistance.h" />
+    <ClInclude Include="src\Spatial.h" />
+    <ClInclude Include="src\SpatioTemporal.h" />
+    <ClInclude Include="src\GeneticEvolution.h" />
+    <ClInclude Include="src\Voronoi.h" />
+    <ClInclude Include="src\OrTools.h" />
+    <ClInclude Include="src\KMedoid.h" />
+  </ItemGroup>
+</Project>
