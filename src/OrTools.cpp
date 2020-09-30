@@ -11,7 +11,6 @@
 #include <sstream>
 #include <string>
 
-
 using namespace operations_research;
 
 void OrTools::write_solution(compact_solution& solution, std::string name)

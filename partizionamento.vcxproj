@@ -133,8 +133,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Robert\source\repos\partizionamento\or-tools\include;C:\Users\Robert\source\repos\partizionamento\voronoi_utils\src;C:\Users\Robert\Desktop\qhull-2019.1\src\libqhull_r;C:\Users\Robert\Desktop\qhull-2019.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalUsingDirectories>C:\Users\Robert\Desktop\qhull-2019.1\src;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\or-tools\include;$(SolutionDir)\voronoi_utils\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,7 +142,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>qhullcpp.lib;qhullstatic_r.lib;ortools.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\Robert\source\repos\partizionamento\or-tools\lib;C:\Users\Robert\source\repos\partizionamento\voronoi_utils\lib;C:\Users\Robert\Desktop\qhull-2019.1\src\libqhull_r;C:\Users\Robert\Desktop\qhull-2019.1\src;C:\Users\Robert\Desktop\qhull-2019.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\or-tools\lib;$(SolutionDir)\voronoi_utils\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -153,8 +153,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Robert\source\repos\partizionamento\or-tools\include;C:\Users\Robert\source\repos\partizionamento\voronoi_utils\src;C:\Users\Robert\Desktop\qhull-2019.1\src\libqhull_r;C:\Users\Robert\Desktop\qhull-2019.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalUsingDirectories>C:\Users\Robert\Desktop\qhull-2019.1\src;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\or-tools\include;$(SolutionDir)\voronoi_utils\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -162,7 +162,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>qhullcpp.lib;qhullstatic_r.lib;ortools.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\Robert\source\repos\partizionamento\or-tools\lib;C:\Users\Robert\source\repos\partizionamento\voronoi_utils\lib;C:\Users\Robert\Desktop\qhull-2019.1\src\libqhull_r;C:\Users\Robert\Desktop\qhull-2019.1\src;C:\Users\Robert\Desktop\qhull-2019.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\or-tools\lib;$(SolutionDir)\voronoi_utils\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
