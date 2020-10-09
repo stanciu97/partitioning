@@ -101,6 +101,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\Robert\source\repos\partizionamento\or-tools\include;C:\Users\Robert\source\repos\partizionamento\voronoi_utils\src;C:\Users\Robert\Desktop\qhull-2019.1\src\libqhull_r;C:\Users\Robert\Desktop\qhull-2019.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalUsingDirectories>C:\Users\Robert\Desktop\qhull-2019.1\src;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -117,6 +118,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\Robert\source\repos\partizionamento\or-tools\include;C:\Users\Robert\source\repos\partizionamento\voronoi_utils\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalUsingDirectories>%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -135,6 +137,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)\or-tools\include;$(SolutionDir)\voronoi_utils\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalUsingDirectories>%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -155,6 +158,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)\or-tools\include;$(SolutionDir)\voronoi_utils\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalUsingDirectories>%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

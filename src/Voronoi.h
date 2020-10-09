@@ -1,32 +1,55 @@
 #pragma once
 #include "NodesDistance.h"
+#include <libqhullcpp/Qhull.h>
+#include <libqhullcpp/QhullVertex.h>
+#include<list>
 
-/**
-* function that makes a partition of the customers using a Voronoi diagram.
-* 
-* input:
-* nodes: reference to an initialized struct node containing the informations about the VRPTW instance
-* n_part: number of seeds used. It is not equal to the number of final groups of the partition
-* find_distance: reference to a NodesDistance istance, determines the distance usend in the algorithm
-* 
-* output:
-* n_part or n_part + 1 groups forming the partition
-* 
-*/
-std::vector<std::vector<int>> voronoi_part(nodes& nodes, int n_part, NodesDistance &find_distance);
-
-
-/**
-* function that uses voronoi_part() on groups that are too large, creating more groups.
-* The number of seeds implicitly tell groups size, groups that are larger then this
-* size are paritioned again
-* 
-* input:
-* nodes: reference to an initialized struct node containing the informations about the VRPTW instance
-* n_part: number of seeds used. It is not equal to the number of final groups of the partition
-* find_distance: reference to a NodesDistance istance, determines the distance usend in the algorithm
+/*
+* class that implements a partition based on a Voronoi diagram. 
 *
-* output:
-* partition containing groups of acceptable size
 */
-std::vector<std::vector<int>> iterative_voronoi_part(nodes& nodes, int n_part, NodesDistance &find_distance);
+
+class Voronoi
+{
+public:
+
+	/**
+	* costructor
+	*
+	* input:
+	* node: reference to an existing struct nodes
+	* distance: reference to an istance of NodeDistance, determines the distance used in the algorithm (Euclidean, spatiotemporal)
+	*
+	*/
+	Voronoi(nodes& node, NodesDistance& distance);
+
+	/**
+	* function that makes a partition of the customers using a Voronoi diagram.
+	*
+	* input:
+	* n_part: number of seeds used. It is not equal to the number of final groups of the partition
+	* n_iter: number of times the algorithm restarts
+	*
+	* output:
+	* n_part groups forming the partition, the solution is the best found after n_iter iterations
+	*
+	*/
+	std::vector<std::vector<int>> voronoi_part(int n_part);
+	std::vector<std::vector<int>> voronoi_part(int n_part, int n_iter);
+
+private:
+	nodes* node;
+	NodesDistance* distance;
+	std::vector<orgQhull::QhullVertex> indexed_vertex;
+
+	//object used to compute the voronoi diagram
+	orgQhull::Qhull qhull;
+
+	int n_iter = 100;
+
+	//adds (if exists) an element to a cluster. Returns the distance between second last and last inserted element
+	double grow_cluster(int& total_size, std::vector<int>& group, std::vector<bool>& inserted, std::list<int>& queue);
+
+	//assign left elements to the best group, considering the distance between the gravity points of the groups and left elements
+	void queue_left(std::vector<std::vector<int>>& groups, std::vector<bool>& inserted, std::vector<std::list<int>>& assign_group, std::vector<int>& gravity);
+};

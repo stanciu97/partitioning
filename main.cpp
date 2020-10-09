@@ -36,8 +36,7 @@ int main()
 
 			std::cout << "insert:" << std::endl <<
 				"1: solve problem after partitioning in sub-problems" << std::endl <<
-				"2: directly solve problem" << std::endl <<
-				"0: end the program" << std::endl;
+				"2: directly solve problem" << std::endl;
 			std::cin >> option;
 
 			if (option == 1)
@@ -81,7 +80,8 @@ int main()
 				}
 				case 2:
 				{
-					partition = iterative_voronoi_part(node, cluster, *distance);
+					Voronoi voro(node, *distance);
+					partition = voro.voronoi_part(cluster);
 					break;
 				}
 				case 3:
@@ -125,6 +125,11 @@ int main()
 				OrTools::write_solution(solution, output_folder + output_name);
 			}
 		}
+
+		std::cout << "insert:" << std::endl <<
+			"0: end the program" << std::endl <<
+			"other numbers:  read a new file" << std::endl;
+		std::cin >> option;
 	}
 
 	return 0;
