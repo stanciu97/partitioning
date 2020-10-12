@@ -1,0 +1,15 @@
+solve with solution from genetic partition:
+cost: 141161    vehicles: 106    elapsed time: 16
+cost: 140897    vehicles: 106    elapsed time: 12
+cost: 141814    vehicles: 107    elapsed time: 12
+
+solve with solution from K-medoid partition:
+cost: 140618    vehicles: 105    elapsed time: 19
+cost: 139503    vehicles: 105    elapsed time: 15
+cost: 140618    vehicles: 105    elapsed time: 19
+
+solve with solution from voronoi partition:
+cost: 141465    vehicles: 106    elapsed time: 25
+cost: 138905    vehicles: 105    elapsed time: 21
+cost: 139181    vehicles: 105    elapsed time: 25
+

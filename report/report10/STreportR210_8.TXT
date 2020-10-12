@@ -1,0 +1,36 @@
+solve with genetic partition:
+cost: 132469    vehicles: 34    elapsed time: 4
+cost: 141839    vehicles: 36    elapsed time: 4
+cost: 127106    vehicles: 33    elapsed time: 4
+cost: 133911    vehicles: 35    elapsed time: 4
+cost: 148318    vehicles: 37    elapsed time: 4
+cost: 128914    vehicles: 32    elapsed time: 5
+cost: 133746    vehicles: 33    elapsed time: 5
+cost: 136449    vehicles: 36    elapsed time: 4
+cost: 136054    vehicles: 34    elapsed time: 4
+cost: 137952    vehicles: 34    elapsed time: 5
+
+solve with K-medoid partition:
+cost: 128275    vehicles: 34    elapsed time: 3
+cost: 125203    vehicles: 34    elapsed time: 3
+cost: 129972    vehicles: 33    elapsed time: 4
+cost: 133307    vehicles: 34    elapsed time: 3
+cost: 125574    vehicles: 31    elapsed time: 4
+cost: 136436    vehicles: 34    elapsed time: 4
+cost: 148805    vehicles: 36    elapsed time: 4
+cost: 134391    vehicles: 33    elapsed time: 4
+cost: 123027    vehicles: 32    elapsed time: 3
+cost: 128008    vehicles: 31    elapsed time: 4
+
+solve with voronoi partition:
+cost: 145600    vehicles: 30    elapsed time: 6
+cost: 152522    vehicles: 32    elapsed time: 5
+cost: 171078    vehicles: 37    elapsed time: 5
+cost: 145002    vehicles: 30    elapsed time: 5
+cost: 166083    vehicles: 34    elapsed time: 5
+cost: 142614    vehicles: 30    elapsed time: 5
+cost: 152340    vehicles: 35    elapsed time: 5
+cost: 168771    vehicles: 33    elapsed time: 5
+cost: 163380    vehicles: 34    elapsed time: 5
+cost: 162901    vehicles: 34    elapsed time: 4
+
