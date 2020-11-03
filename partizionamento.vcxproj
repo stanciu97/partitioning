@@ -170,12 +170,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="report_main.cpp" />
     <ClCompile Include="src\GeneticEvolution.cpp" />
     <ClCompile Include="src\KMedoid.cpp" />
     <ClCompile Include="src\NodesDistance.cpp" />
     <ClCompile Include="src\OrTools.cpp" />
     <ClCompile Include="src\Spatial.cpp" />
+    <ClCompile Include="src\Spatial3d.cpp" />
     <ClCompile Include="src\SpatioTemporal.cpp" />
     <ClCompile Include="src\Voronoi.cpp" />
   </ItemGroup>
@@ -186,6 +187,7 @@
     <ClInclude Include="src\NodesDistance.h" />
     <ClInclude Include="src\OrTools.h" />
     <ClInclude Include="src\Spatial.h" />
+    <ClInclude Include="src\Spatial3d.h" />
     <ClInclude Include="src\SpatioTemporal.h" />
     <ClInclude Include="src\Voronoi.h" />
   </ItemGroup>

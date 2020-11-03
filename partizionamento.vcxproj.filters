@@ -8,7 +8,8 @@
     <ClCompile Include="src\NodesDistance.cpp" />
     <ClCompile Include="src\KMedoid.cpp" />
     <ClCompile Include="src\Voronoi.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\Spatial3d.cpp" />
+    <ClCompile Include="report_main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ConsecutiveRandoms.h" />
@@ -19,5 +20,6 @@
     <ClInclude Include="src\OrTools.h" />
     <ClInclude Include="src\KMedoid.h" />
     <ClInclude Include="src\Voronoi.h" />
+    <ClInclude Include="src\Spatial3d.h" />
   </ItemGroup>
 </Project>

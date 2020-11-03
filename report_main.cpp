@@ -1,5 +1,6 @@
 #include "src/NodesDistance.h"
 #include "src/Spatial.h"
+#include "src/Spatial3d.h"
 #include "src/SpatioTemporal.h"
 #include "src/GeneticEvolution.h"
 #include "src/Voronoi.h"
@@ -11,28 +12,31 @@
 #include <fstream>
 
 const std::string input_folder = "input/";
-const std::string output_folder = "report/";
+//const std::string output_folder = "report/";
 
-void voronoi_solve(nodes &node, NodesDistance& distance, int n_part, std::ofstream& output)
+int voronoi_solve(nodes &node, NodesDistance& distance, int n_part, std::ofstream& output, bool balanced)
 {
 	OrTools solver(node);
 	auto clock_start = std::chrono::system_clock::now();
-	Voronoi voro(node, distance);
-	auto part = voro.voronoi_part(n_part);
+	Voronoi voro(node, distance, balanced);
+	auto part = voro.voronoi_part_bubble(n_part);
 	double cost = 0;
 	double vehicles = 0;
 	for (auto i = 0; i < part.size(); i++)
 	{
 		auto sol = solver.solve_sub_problem(part[i]);
+		if (sol.total_cost == 0)
+			return -1;
 		cost += sol.total_cost;
 		vehicles += sol.number_vehicles;
 	}
 	auto clock_end = std::chrono::system_clock::now();
 	auto elapsed = std::chrono::duration_cast <std::chrono::seconds> (clock_end - clock_start).count();
 	output << "cost: " << cost << "    vehicles: " << vehicles << "    elapsed time: " << elapsed << std::endl;
+	return 0;
 }
 
-void genetic_solve(nodes& node, NodesDistance& distance, int n_part, std::ofstream& output)
+int genetic_solve(nodes& node, NodesDistance& distance, int n_part, std::ofstream& output)
 {
 	OrTools solver(node);
 	auto clock_start = std::chrono::system_clock::now();
@@ -44,14 +48,17 @@ void genetic_solve(nodes& node, NodesDistance& distance, int n_part, std::ofstre
 	{
 		auto sol = solver.solve_sub_problem(part[i]);
 		cost += sol.total_cost;
+		if (sol.total_cost == 0)
+			return -1;
 		vehicles += sol.number_vehicles;
 	}
 	auto clock_end = std::chrono::system_clock::now();
 	auto elapsed = std::chrono::duration_cast <std::chrono::seconds> (clock_end - clock_start).count();
 	output << "cost: " << cost << "    vehicles: " << vehicles << "    elapsed time: " << elapsed << std::endl;
+	return 0;
 }
 
-void medoid_solve(nodes& node, NodesDistance& distance, int n_part, std::ofstream& output)
+int medoid_solve(nodes& node, NodesDistance& distance, int n_part, std::ofstream& output)
 {
 	OrTools solver(node);
 	auto clock_start = std::chrono::system_clock::now();
@@ -63,11 +70,14 @@ void medoid_solve(nodes& node, NodesDistance& distance, int n_part, std::ofstrea
 	{
 		auto sol = solver.solve_sub_problem(part[i]);
 		cost += sol.total_cost;
+		if (sol.total_cost == 0)
+			return -1;
 		vehicles += sol.number_vehicles;
 	}
 	auto clock_end = std::chrono::system_clock::now();
 	auto elapsed = std::chrono::duration_cast <std::chrono::seconds> (clock_end - clock_start).count();
 	output << "cost: " << cost << "    vehicles: " << vehicles << "    elapsed time: " << elapsed << std::endl;
+	return 0;
 }
 
 void direct_solve(nodes& node, NodesDistance& distance, std::ofstream& output)
@@ -137,9 +147,10 @@ void solve_from_medoid(nodes& node, NodesDistance& distance, int n_part, std::of
 
 int main()
 {
+	std::vector<std::string> output_folder = { "report2/", "report5/", "report10/" };
+	std::vector<int> n_part = { 2, 5, 10 };
 	std::vector<std::string> filename; 
-	int n_iter = 3;
-	int n_part = 10;
+	int n_iter = 10;
 
 	//filenames in the input_folder
 	for (const auto& entry : std::filesystem::directory_iterator(input_folder))
@@ -147,84 +158,47 @@ int main()
 		filename.push_back(entry.path().filename().string());
 	}
 
-	for (auto file = 0; file < filename.size(); file++)
+	for (int n = 0; n < n_part.size(); n++)
 	{
-		std::ofstream report(output_folder + "STreport" + filename[file], std::ofstream::out | std::ofstream::trunc);
-		nodes node;
-		init_nodes(node, input_folder + filename[file]);
-		SpatioTemporal spatio_temporal(node);
-
-		/*report << "solve without partition:" << std::endl;
-		for (auto i = 0; i < 3; i++)
+		for (auto file = 0; file < filename.size(); file++)
 		{
-			direct_solve(node, spatio_temporal, report);
-		}
-		report << std::endl;*/
+			std::ofstream report(output_folder[n] + "Sreport" + filename[file], std::ofstream::out | std::ofstream::trunc);
+			nodes node;
+			init_nodes(node, input_folder + filename[file]);
+			Spatial spatial(node);
 
-		report << "solve with solution from genetic partition:" << std::endl;
-		for (auto i = 0; i < n_iter; i++)
-		{
-			solve_from_genetic(node, spatio_temporal, n_part, report);
-		}
-		report << std::endl;
+			report << "solve with genetic partition:" << std::endl;
+			for (auto i = 0; i < n_iter; i++)
+			{
+				genetic_solve(node, spatial, n_part[n], report);
+			}
+			report << std::endl;
 
-		report << "solve with solution from K-medoid partition:" << std::endl;
-		for (auto i = 0; i < n_iter; i++)
-		{
-			solve_from_medoid(node, spatio_temporal, n_part, report);
-		}
-		report << std::endl;
+			report << "solve with K-medoid partition:" << std::endl;
+			for (auto i = 0; i < n_iter; i++)
+			{
+				medoid_solve(node, spatial, n_part[n], report);
+			}
+			report << std::endl;
 
-		report << "solve with solution from voronoi partition:" << std::endl;
-		for (auto i = 0; i < n_iter; i++)
-		{
-			solve_from_voronoi(node, spatio_temporal, n_part, report);
-		}
-		report << std::endl;
+			report << "solve with balanced voronoi partition:" << std::endl;
+			for (auto i = 0; i < n_iter; i++)
+			{
+				i += voronoi_solve(node, spatial, n_part[n], report, true);
+			}
+			report << std::endl;
 
-		report.close();
-		
+			report << "solve with strongest voronoi partition:" << std::endl;
+			for (auto i = 0; i < n_iter; i++)
+			{
+				i += voronoi_solve(node, spatial, n_part[n], report, false);
+			}
+			report << std::endl;
+
+			report.close();
+
+		}
 	}
-
-	for (auto file = 0; file < filename.size(); file++)
-	{
-		std::ofstream report(output_folder + "Sreport" + filename[file], std::ofstream::out | std::ofstream::trunc);
-		nodes node;
-		init_nodes(node, input_folder + filename[file]);
-		Spatial spatial(node);
-
-		/*report << "solve without partition:" << std::endl;
-		for (auto i = 0; i < 3; i++)
-		{
-			direct_solve(node, spatial, report);
-		}
-		report << std::endl;*/
-
-		report << "solve with solution from genetic partition:" << std::endl;
-		for (auto i = 0; i < n_iter; i++)
-		{
-			solve_from_genetic(node, spatial, n_part, report);
-		}
-		report << std::endl;
-
-		report << "solve with solution from K-medoid partition:" << std::endl;
-		for (auto i = 0; i < n_iter; i++)
-		{
-			solve_from_medoid(node, spatial, n_part, report);
-		}
-		report << std::endl;
-
-		report << "solve with solution from voronoi partition:" << std::endl;
-		for (auto i = 0; i < n_iter; i++)
-		{
-			solve_from_voronoi(node, spatial, n_part, report);
-		}
-		report << std::endl;
-
-		report.close();
-
-	}
-
 	return 0;
 
 }

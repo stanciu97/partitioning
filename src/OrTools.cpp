@@ -79,6 +79,7 @@ compact_solution OrTools::solve_sub_problem(std::vector<int> &sub_id)
     nodes sub_node;
     init_sub_nodes(this->node, sub_node, sub_id);
     auto size = sub_node.id.size();
+    sub_node.vehicles = std::max(int(1.2*size / (this->node.id.size() / this->node.vehicles)), int(2*this->node.id.size()/this->node.vehicles));
 
     std::vector<std::vector<int>> sub_time_matrix(size, std::vector<int>(size));
     for (int i = 0; i < size; i++)
@@ -90,7 +91,7 @@ compact_solution OrTools::solve_sub_problem(std::vector<int> &sub_id)
     }
 
     //same as in solve_problem() using sub_problem data
-    RoutingIndexManager manager(sub_time_matrix.size(), this->node.vehicles, this->depot);
+    RoutingIndexManager manager(sub_time_matrix.size(), sub_node.vehicles, this->depot);
     RoutingModel routing(manager);
     
     this->set_constraints(sub_time_matrix, sub_node, manager, routing);
@@ -99,6 +100,7 @@ compact_solution OrTools::solve_sub_problem(std::vector<int> &sub_id)
     RoutingSearchParameters searchParameters = DefaultRoutingSearchParameters();
     searchParameters.set_first_solution_strategy(
         FirstSolutionStrategy::PATH_CHEAPEST_ARC);
+    searchParameters.mutable_time_limit()->set_seconds(60.0);
 
     // Solve the problem.
     const Assignment* solution = routing.SolveWithParameters(searchParameters);
@@ -206,6 +208,12 @@ compact_solution OrTools::readable_solution(nodes& node, const RoutingIndexManag
     compact_solution c_solution;
 
     const RoutingDimension& time_dimension = routing.GetDimensionOrDie("Time");
+
+    if (&solution == nullptr)
+    {
+        c_solution.total_cost = 0;
+        return c_solution;
+    }
     
     for (int vehicle_id = 0; vehicle_id < node.vehicles; ++vehicle_id)
     {
